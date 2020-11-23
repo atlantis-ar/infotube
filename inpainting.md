@@ -18,12 +18,12 @@ With the advent of technology people enjoyed a more intermediate,accurate and fa
 ## _Information age_
 Over the last few decades, technological leaps have enabled the world-wide, cheap and efficient usage of commodity cameras, as well as the extensively used _digital image processing_ field. This field opened up countless new possibilities on image processing, especially in the inpainting or restoration tasks.
 
-![](https://github.com/atlantis-ar/notes/blob/main/assets/img/image_inpainting/object_removal.jpg)
+![](https://github.com/atlantis-ar/notes/blob/main/assets/img/image_inpainting/object_removal.jpeg)
 <center>
 *Object removal example, at first removal of the object (middle) and subsequently inpainting (right)
 </center>
 
-![](https://github.com/atlantis-ar/notes/blob/main/assets/img/image_inpainting/face_inpainting.jpg)
+![](https://github.com/atlantis-ar/notes/blob/main/assets/img/image_inpainting/face_inpainting.png)
 <center>
 *Object removal example, complete generation of face*
 </center>
