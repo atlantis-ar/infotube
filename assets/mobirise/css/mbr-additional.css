@@ -2099,8 +2099,11 @@ a {
   padding-bottom: 5rem;
   background-image: url("../../../assets/images/background5.jpg");
 }
+.cid-shf2VEB3sy .mbr-section-subtitle {
+  text-align: center;
+}
 .cid-shf4qSdvSx {
-  padding-top: 6rem;
+  padding-top: 4rem;
   padding-bottom: 1rem;
   background-color: #ffffff;
 }
@@ -2236,7 +2239,7 @@ a {
 .cid-shaDL2nMAJ {
   padding-top: 45px;
   padding-bottom: 45px;
-  background-image: url("../../../assets/images/background5.jpg");
+  background-color: #ffffff;
 }
 @media (max-width: 767px) {
   .cid-shaDL2nMAJ .media-wrap {
