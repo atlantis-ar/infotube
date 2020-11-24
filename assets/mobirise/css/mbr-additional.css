@@ -2192,9 +2192,18 @@ a {
   padding-bottom: 5rem;
   background-color: #ffffff;
 }
+.cid-shhNwUIsHC {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #4479d9;
+}
+.cid-shhNwUIsHC .mbr-text {
+  color: #ffffff;
+  text-align: left;
+}
 .cid-shhsuPmWti {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: #ffffff;
 }
 .cid-shhsuPmWti .item {
@@ -2443,8 +2452,17 @@ a {
 .cid-shhsuPmWti H6 {
   text-align: center;
 }
+.cid-shhP0LqSjS {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  background-color: #4479d9;
+}
+.cid-shhP0LqSjS .mbr-text {
+  color: #ffffff;
+  text-align: center;
+}
 .cid-shhsvTWN2n {
-  padding-top: 6rem;
+  padding-top: 0rem;
   padding-bottom: 6rem;
   background-color: #ffffff;
 }
@@ -2452,7 +2470,7 @@ a {
   padding-bottom: 2rem;
 }
 .cid-shhsvTWN2n .item-wrapper {
-  height: 100%;
+  height: 300px;
   position: relative;
 }
 .cid-shhsvTWN2n .item-wrapper img {
