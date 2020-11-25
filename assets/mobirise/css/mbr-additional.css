@@ -2492,12 +2492,7 @@ a {
   padding-bottom: 2rem;
 }
 .cid-shhsvTWN2n .item-wrapper {
-  height: 300px;
   position: relative;
-}
-.cid-shhsvTWN2n .item-wrapper img {
-  height: 100%;
-  object-fit: cover;
 }
 .cid-shhsvTWN2n .item-wrapper .icon-wrapper {
   pointer-events: none;
