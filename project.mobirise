@@ -2344,7 +2344,10 @@
           "_styles": {
             "padding-top": "(@paddingTop * 1rem)",
             "padding-bottom": "(@paddingBottom * 1rem)",
-            "background-color": "@bgColor"
+            "background-color": "@bgColor",
+            ".mbr-text": {
+              "color": "#fafafa"
+            }
           },
           "_name": "content5",
           "_sourceTheme": "mobirise5",
