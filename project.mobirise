@@ -46,7 +46,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 208,
+    "uniqCompNum": 209,
     "versionPublish": "5.1.4",
     "screenshot": "screenshot.png",
     "favicon": "@PROJECT_PATH@/assets/images/untitled-1-118x125-1.png",
@@ -5895,15 +5895,13 @@
             }
           },
           "_name": "content7",
-          "_customHTML": "<section class=\"content7\" group=\"Content\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"10\" step=\"1\">\n        <input type=\"color\" name=\"lineColor\" title=\"Line Color\" value=\"#6592e6\">\n        <input type=\"color\" name=\"cardColor\" title=\"Color\" value=\"#fafafa\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-{{textWidth}}\">\n                <blockquote mbr-text=\"\" class=\"mbr-fonts-style\" mbr-theme-style=\"display-4\">\n                <h5 class=\"mbr-section-title mbr-fonts-style mb-2\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\"><b style=\"font-size: 1.1rem; font-style: italic;\">“-Swimming, anyone??!!”,</b><span style=\"font-size: 1.1rem;\"> in Mediterranean-English was heard, as a woman screamed just right off the deck’s edge. The moment of truth! Bob takes a deep breath and sprints towards her, only to stare hesitantly, as the currents drag her little girl away from the vessel.&nbsp;&nbsp;</span><br></h5><br><div><b>“-Com’ on!”,</b> <span style=\"font-style: normal;\">Bob shouted silently to himself</span><b>, “-You’ve learnt how to do it in the pool; now, jump into the sea! ” </b><span style=\"font-style: normal;\">or not…&nbsp;</span></div></blockquote>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_anchor": "content7-5r",
-          "_isUserblock": true,
-          "_sourceTheme": "mobirise5",
-          "_cid": "sOlOj7gCrj",
+          "_customHTML": "<section class=\"content7\" group=\"Content\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"10\" step=\"1\">\n        <input type=\"color\" name=\"lineColor\" title=\"Line Color\" value=\"#6592e6\">\n        <input type=\"color\" name=\"cardColor\" title=\"Color\" value=\"#fafafa\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-{{textWidth}}\">\n                <blockquote mbr-text class=\"mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                <h5 class=\"mbr-section-title mbr-fonts-style mb-2\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\"><i><b>“-Swimming, anyone??!!”</b></i>, in Mediterranean-English was heard, as a woman screamed just right off the deck’s edge. The moment of truth! Bob takes a deep breath and sprints towards her, only to stare hesitantly, as the currents drag her little girl away from the vessel.\n</h5><div><span style=\"font-style: normal;\">\n</span></div><div><b style>“-Com’ on!”</b><span style=\"font-style: normal;\">, Bob shouted silently to himself, </span><b style>“-You’ve learnt how to do it in the pool; now, jump into the sea! ”</b><span style=\"font-style: normal;\"> or not…&nbsp;</span></div></blockquote>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sOlOOlMYRc",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {}
+          "_params": {},
+          "_anchor": "content7-5s"
         },
         {
           "alias": false,
