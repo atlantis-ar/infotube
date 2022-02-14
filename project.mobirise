@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "ATLANTIS",
-    "currentPage": "index.html",
+    "currentPage": "segmenting_to_remove.html",
     "theme": {
       "name": "mobirise5",
       "title": "Mobirise 5",
@@ -7179,7 +7179,7 @@
         }
       ]
     },
-    "page6.html": {
+    "segmenting_to_remove.html": {
       "settings": {
         "title": "Segmenting Objects to Remove Them",
         "order": 1,
