@@ -7,10 +7,10 @@
   <meta name="generator" content="Mobirise v5.2.0, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/untitled-1-118x125-1.png" type="image/x-icon">
-  <meta name="description" content="Diminished Reality: A powerful technology for Indoor redecoration applications">
+  <meta name="description" content="Instance Segmentation Revisited">
   
   
-  <title>Diminished Reality: A powerful technology for Indoor redecoration applications</title>
+  <title>Segmenting Objects to Remove Them</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -28,7 +28,7 @@
 </head>
 <body>
   
-  <section class="menu menu3 cid-shaj5hhASv" once="menu" id="menu3-3v">
+  <section class="menu menu3 cid-si0EP2q2Wf" once="menu" id="menu3-5t">
     
     <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
         <div class="container">
@@ -70,167 +70,140 @@
     </nav>
 </section>
 
-<section class="content4 cid-szlMOFtFq5" id="content4-3x">
+<section class="content10 cid-sXpwqy8guT" id="content10-60">
     
-    <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(255, 255, 255);">
-    </div>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="title col-md-12 col-lg-11">
-                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Diminished Reality: A powerful technology for Indoor Redecoration Applications</strong></h3>
-                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7"><strong>Vasileios Gkitsas</strong></h4>
+            <div class="col-12 col-md">
                 
+                <h6 class="mbr-section-subtitle mbr-fonts-style mb-4 display-5">Segmenting Objects to Remove Them</h6>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <p class="mbr-text mbr-fonts-style display-7">In previous articles, we have introduced the concept of <a href="DR_powerful_tool.html" class="text-primary">Diminished Reality (DR)</a>. In short, DR conceals a real object in the scene by replacing it with background information in order to give the viewer the illusion, that the object is no longer present. This is useful to avoid that it conflicts with object inserted into the scene in place of the original object. But the questions are: How do we select the object to be removed, without asking the user to draw a mask? And how do we update the selection when the user moves?
+<br>We have introduced the concepts behind <a href="instance_segmentation.html" class="text-primary">Instance Segmentation</a>&nbsp;in a previous article. Given an image of the scene (which could also be a panoramic image), the task is to provide a mask for each object instance (i.e., if we have two chairs overlapping in the image, we still want to separate masks) as well as a class label for each of these masks (e.g. “chair”).&nbsp;<br></p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="content5 cid-szlMPQFrQI" id="content5-3y">
+<section class="content5 cid-sXpwAUR3OQ" id="content5-62">
     
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-12">
+            <div class="col-md-12 col-lg-10">
                 
-                
-                <p class="mbr-text mbr-fonts-style display-7">Diminished reality (DR) is the process of using technology for eliminating or diminishing objects that exist in our visual perception by using tools such as inpainting. It does not lie alongside the traditional immersive technologies, Augmented Reality (AR), Virtual Reality (VR), and Mixed Reality (MR), since it does not explicitly mix reality types. Nevertheless, diminished reality can be used in conjunction with AR to provide high-quality experiences to the users.                       <br></p>
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-4 display-5">Data for Training</h4>
+                <p class="mbr-text mbr-fonts-style display-7">One challenge for all machine learning tasks is the availability of training data. Basically, there are two choices: either data is captured with cameras and then annotated (for semantic indoor segmentation this applies for example to the <a href="http://www.scan-net.org/" class="text-primary" target="_blank">Scannet </a>and <a href="https://niessner.github.io/Matterport/" class="text-primary" target="_blank">Matterport3D</a>&nbsp;datasets, or data is generated synthetically (e.g., as one for <a href="https://interiornet.org/" class="text-primary" target="_blank">InteriorNet</a>, <a href="https://structured3d-dataset.org/" class="text-primary" target="_blank">Structured3D </a>or the recent <a href="https://structured3d-dataset.org/" class="text-primary" target="_blank">Hypersim</a>&nbsp;datasets). The first results in realistic data, but at the cost of creating annotations manually or semi-automatically of limited quality, while in the second case annotation come for free, but there is a domain gap between rendered scenes and real images.
+<br>Instance segmentation on panoramic images adds another challenge: panoramic training data is scarce, and thus it seems a better approach to train on regular data and ensure that the algorithm generalises to panoramic data. We have analysed this issue in a <a href="https://zenodo.org/record/6077859#.Ygpni1kxnmE" class="text-primary" target="_blank">paper</a> published in fall 2021.
+<br>The figures below compares results of our <a href="https://github.com/atlantis-ar/mmdetection" class="text-primary" target="_blank">SOLOv2 model</a>, fine-tuned on either Scannet (left) and Hypersim (right). We see that the segmentation quality is better for the variant trained on Hypersim, in particular for the wall segments.&nbsp;<br></p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="features17 cid-szlOH3CePb" id="features18-45">
-
-    
-
-    
-    <div class="container">
-        <div class="mbr-section-head">
-            <div class="col-12">
-                <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Why Diminished Reality?</strong></h4>
-                
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card-wrapper mb-4">
-                    <div class="card-box align-left">
-                        
-                        <p class="mbr-text mbr-fonts-style mb-3 display-7">
-                            Increasing availability of commercial 360° cameras
-                            </p><div class="link-wrap">
-                                
-                            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card-wrapper mb-4">
-                    <div class="card-box align-left">
-                        
-                        <p class="mbr-text mbr-fonts-style mb-3 display-7">
-                            Huge interest in emerging technologies namely AR
-                            </p><div class="link-wrap">
-                                
-                            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card-wrapper mb-4">
-                    <div class="card-box align-left">
-                        
-                        <p class="mbr-text mbr-fonts-style mb-3 display-7">Need for novel applications such as interior space re-design&nbsp;</p><div class="link-wrap">
-                                
-                            </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-<section class="content15 cid-szlMSk1Cv0" id="content15-42">
-
-    
-
-    
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="card col-md-12 col-lg-8">
-                <div class="card-wrapper">
-                    <div class="card-box align-left">
-                        <h4 class="card-title mbr-fonts-style mbr-white mb-3 display-5"><strong>Approach</strong></h4>
-                        <p class="mbr-text mbr-fonts-style display-7">We aim to diminish objects in indoor spherical panoramas. On the one hand, the regional nature of our problem is similar to image inpainting, since part of the content needs to be photo-realistically hallucinated. On the other hand, the inherent ambiguity of generating content that hallucinates occluded areas necessitates drawing away from image inpainting, towards image-to-image translation, where only specific parts of the original image need to be preserved, and others need to be adapted to another domain. To this end, we approximate the DR task by translating a scene filled with objects to an empty, background only, scene.&nbsp;<br></p>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="content6 cid-szlMR0w3xf" id="content6-40">
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-12">
-                <hr class="line">
-                <p class="mbr-text align-center mbr-fonts-style my-4 display-5"><strong>Bridging the two “worlds” of Image Inpainting </strong><br><strong>and image-to-image translation</strong><br></p>
-                <hr class="line">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="content5 cid-szlPt51Srw" id="content5-46">
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-12">
-                
-                
-                <p class="mbr-text mbr-fonts-style display-7">In our work, we bring the best of the two worlds. We leverage the advantages of image inpainting and image-to-image translation to generate photo-realistic and semantic-aware content, respectively. More specifically, we exploit the photorealistic generation capacity of generative models in combination with the boundary preserving properties of image-to-image translation, to replace parts of a 360° image with the occluded background.<br></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="image3 cid-szlMQu5vyq" id="image3-3z">
+<section class="image4 cid-sXpwu4aOcU" id="image4-61">
     
 
     
 
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-12">
+        <div class="row">
+            <div class="col-12 col-lg-6">
                 <div class="image-wrapper">
-                    <img src="assets/images/newpanodr-1600x534.png" alt="">
-                    <p class="mbr-description mbr-fonts-style mt-2 align-center display-4">The <a href="https://arxiv.org/abs/2106.00446" class="text-success text-primary" target="_blank">PanoDR </a>model that preserves the structural reality of the scene while counterfactually inpainting it. The input masked image is encoded twice, once densely by the structure encoder outputting a layout segmentation map, and once by the surrounding context encoder, capturing the scene’s context while taking the mask into account via a series of gated convolutions. These are then combined by the structure-aware decoder with a set of per layout component style codes that are extracted from the complete input image. The final diminished result is created via compositing the predicted and input images using the diminishing mask.</p>
+                    <img src="assets/images/d4e359d5addc4f4d94e253fa0b7253d1-1-1076x605.jpg" alt="Hypersim">
+                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">
+                        trained on Hypersim</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="image-wrapper">
+                    <img src="assets/images/d4e359d5addc4f4d94e253fa0b7253d1-1076x605.jpg" alt="Scannet">
+                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">
+                        trained on ScanNet</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="image3 cid-szlRiAPCxS" id="image3-47">
+<section class="content7 cid-sXqrYhUH9G" id="content7-67">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+                <blockquote>
+                <h5 class="mbr-section-title mbr-fonts-style mb-2 display-7"><strong>Dataset dependency</strong></h5>
+                <p class="mbr-text mbr-fonts-style display-4">If we look at the datasets, we see that the images in the datasets have different fields of view, and the wider one generalises the better to panoramic data.</p></blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="image4 cid-sXqs60AWuu" id="image4-68">
     
 
     
 
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-12">
+        <div class="row">
+            <div class="col-12 col-lg-6">
                 <div class="image-wrapper">
-                    <img src="assets/images/dr-1238x413.png" alt="">
-                    <p class="mbr-description mbr-fonts-style mt-2 align-center display-4">Qualitative results for diminishing objects from indoor spherical panoramas. First two images are from the test set of <a href="https://arxiv.org/abs/1908.00222" class="text-success" target="_blank">Structured3D dataset</a> while the latter is harvested from <a href="https://hdrihaven.com/" class="text-primary" target="_blank">HDRIHAVEN</a>.</p>
+                    <img src="assets/images/frame.0000.tonemap-1024x768.jpg" alt="Hypersim sample">
+                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">
+                        Hypersim sample</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="image-wrapper">
+                    <img src="assets/images/000300-1076x804.jpg" alt="Scannet sample">
+                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">
+                        ScanNet sample</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="footer5 cid-shkKPWTlgE" once="footers" id="footer5-3w">
+<section class="content5 cid-sXpwBH2iVc" id="content5-63">
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                
+                <h4 class="mbr-section-subtitle mbr-fonts-style mb-4 display-5">Swapping heads</h4>
+                <p class="mbr-text mbr-fonts-style display-7">
+                    What can we do about the lack of appropriate training data? We can pretrain the network with a dataset that does not have exactly the same classes, but still includes information that helps adjusting the parameters of the model. <a href="https://cocodataset.org/" class="text-primary" target="_blank">COCO</a>&nbsp;is a dataset containing common everyday object classes, including both indoor and outdoor images. Some of these classes are relevant for indoor scene understanding, while others are not. If we train the network on COCO, and then change the detection and segmentation heads of the network in order to adjust a new set of classes, and train these heads, we gain from the information in both datasets.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="image4 cid-sXpwD3SAQs" id="image4-64">
+    
+
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="image-wrapper">
+                    <img src="assets/images/gs-22-1076x538.jpg" alt="COCO backbone">
+                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">
+                        COCO-pretrained backbone</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="image-wrapper">
+                    <img src="assets/images/gs-0022-20classesscannetrefinedep28-thr0-25-1076x538.jpg" alt="Scannet e2e">
+                    <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">
+                        ScanNet only</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer5 cid-si0EP8gFla" once="footers" id="footer5-5u">
 
     
 
@@ -299,7 +272,7 @@
         </div>
 
     </div>
-</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/d" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Mobirise free builder - <a href="https://mobirise.site/o" style="color:#aaa;">More here</a></p></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>  <script src="assets/theme/js/script.js"></script>  
+</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/g" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Created with <a href="https://mobirise.site/b" style="color:#aaa;">Mobirise</a> site template</p></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>  <script src="assets/theme/js/script.js"></script>  
   
   
  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
